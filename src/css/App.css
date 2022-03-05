@@ -1,0 +1,23 @@
+.none{
+    display :block;
+}
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+.BannerSuperior{
+    background-color: rgb(159, 170, 4);
+}
+
+.BannerSuperiorExtends{
+    background-color: rgb(80, 3, 3);
+    color:#ffffff
+}
+
+.ItemListContainer{
+    background-color: aqua;
+    height : 50;
+}
+
+
