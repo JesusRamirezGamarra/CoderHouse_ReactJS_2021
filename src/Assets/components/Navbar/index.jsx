@@ -1,9 +1,9 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-import imgLogo from  '../../images/TuWebCO.png'
+import imgLogo from  '../../../images/TuWebCO.png'
 // import { Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { CartWidget } from '../BigCard/CartWidget'
+import { CartWidget } from '../Widget/Cart'
 
 const Navbar = () => {
 

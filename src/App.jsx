@@ -4,21 +4,31 @@ import { v4 as uuidv4 } from "uuid";
 
 
 import './css/App.css'
-import { TodoList } from "./components/TodoList";
-import Navbar from './components/navegacion/Navbar'
-import Inicio from './components/paginas/inicio'
-import Hombres from './components/paginas/hombres'
-import Mujeres from './components/paginas/mujeres'
-import Boys from './components/paginas/boys'
-import Girls from './components/paginas/girls'
-import NotFound from './components/paginas/notFound'
+import { TodoList } from "./Assets/components/Todo/TodoList";
+import Navbar from './Assets/components/Navbar'
+import BannerContainer from "./Assets/components/Banner";
 
-import {CartWidget} from './components/BigCard/CartWidget'
+
+import BannerSuperior from "./Assets/components/Banner/Superior";
+import BannerSuperiorExtends from "./Assets/components/Banner/SuperiorWithExtends";
+import BigCard from "./Assets/components/Widget/BigCard";
+import {CartWidget} from './Assets/components/Widget/Cart'
+// import ItemListContainer from './Assets/components/Container/ItemListContainer'
+import ItemListContainer from './Assets/components/Item'
+
+
+
+// import Inicio from './Assets/components/Page/inicio'
+// import Hombres from './Assets/components/Page/hombres'
+// import Mujeres from './Assets/components/Page/mujeres'
+// import Boys from './Assets/components/Page/boys'
+// import Girls from './Assets/components/Page/girls'
+// import NotFound from './Assets/components/Page/notFound'
+
+
+
 // import BannerContainer from "./components/Container/BannerContainer";
-import BannerSuperior from "./components/Banner/BannerSuperior";
-import BannerSuperiorExtends from "./components/Banner/BannerSuperiorExtends";
-import BigCard from "./components/BigCard/BigCard";
-import ItemListContainer from './components/Container/ItemListContainer'
+
 // import Items from './components/paginas/items'
 
 // import "./css/bootstrap.min.css"
@@ -74,10 +84,7 @@ export function App() {
 
 
 
-  const promocionPrincipal ="50"
-  const promocionSecundaria ="10"
-  const promocionPrincipalExtends ="30"
-  const promocionSecundariaExtends ="15"
+
   const mensajeTemporal = "Funciona este ItemListContainer"
   const coderHouse = "Coder House"
 
@@ -85,31 +92,31 @@ export function App() {
     console.log("Hola Coders")
   }
 
-
+  const tituoItemListContainer = 'ItemListContainer'
+  const tituloCard = 'Card'
+  
   return (
     
-      <Fragment>
-
+    <Fragment>
       <div className="App">
-        {/* <h1>Navbar v3.0</h1> */}
-        <Router>
-          {/* <BannerContainer /> */}
-          <BannerSuperiorExtends promocionPrincipal={promocionPrincipal} promocionSecundaria={promocionSecundaria} />
-          <BannerSuperior promocionPrincipal={promocionPrincipalExtends} promocionSecundaria={promocionSecundariaExtends} />
-          <Navbar /> 
-        </Router>
-        <ItemListContainer mensajeTemporal={mensajeTemporal} marca={coderHouse} />
-        <BigCard ejecutar={saludar} />
-        {/* <Router>
-          <Routes>
-            <Route exact path='/' element={Inicio}/>
-            <Route exact path='/hombres' element={Hombres}/>
-            <Route path='/mujeres' exact component={Mujeres}/>
-            <Route path='/boys' exact component={Boys}/>
-            <Route path='/girls' exact component={Girls}/>
-            <Route path='*'  component={NotFound}/>
-          </Routes>
-        </Router> */}
+        test PERU
+          <Router>
+            <BannerContainer />
+            <Navbar /> 
+          </Router>
+          <ItemListContainer titulo={tituoItemListContainer} card={tituloCard} />
+          {/* <ItemListContainer mensajeTemporal={mensajeTemporal} marca={coderHouse} /> */}
+          <BigCard ejecutar={saludar} />
+            {/* <Router>
+              <Routes>
+                <Route exact path='/' element={Inicio}/>
+                <Route exact path='/hombres' element={Hombres}/>
+                <Route path='/mujeres' exact component={Mujeres}/>
+                <Route path='/boys' exact component={Boys}/>
+                <Route path='/girls' exact component={Girls}/>
+                <Route path='*'  component={NotFound}/>
+              </Routes>
+            </Router> */}
       </div>
 
       <TodoList todos={todos} toggleTodo={toggleTodo} />

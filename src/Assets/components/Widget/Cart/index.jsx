@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import imgLogo from  '../../images/CarritoIcon.png'
+import imgLogo from  '../../../../images/CarritoIcon.png'
 export const CartWidget = (props) => {
     console .log(props)
   return (

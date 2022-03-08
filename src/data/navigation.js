@@ -1,3 +1,3 @@
 // @src/data/navigation.js
 
-export default ["Home", "Discover", "Store", "Inbox", "Profile"];
+// export default ["Home", "Discover", "Store", "Inbox", "Profile"];
